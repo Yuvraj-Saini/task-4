@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing - Filter & Sort</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+            <h1>Product Store</h1>
+            <p class="subtitle">Discover amazing products with smart filtering and sorting</p>
+        </header>
+
+        <div class="controls">
+            <div class="filter-group">
+                <label>Sort by:</label>
+                <select id="sortSelect">
+                    <option value="name">Name (A-Z)</option>
+                    <option value="name-desc">Name (Z-A)</option>
+                    <option value="price">Price (Low to High)</option>
+                    <option value="price-desc">Price (High to Low)</option>
+                    <option value="rating">Rating (Low to High)</option>
+                    <option value="rating-desc">Rating (High to Low)</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Max Price: <span class="price-display" id="priceDisplay">$1000</span></label>
+                <div class="price-range">
+                    <input type="range" id="priceRange" min="0" max="1000" value="1000" step="50">
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Categories:</label>
+                <div class="category-filters" id="categoryFilters">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="electronics">Electronics</button>
+                    <button class="category-btn" data-category="clothing">Clothing</button>
+                    <button class="category-btn" data-category="books">Books</button>
+                    <button class="category-btn" data-category="home">Home & Garden</button>
+                    <button class="category-btn" data-category="sports">Sports</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-info" id="resultsInfo">
+            Showing all products
+        </div>
+
+        <div class="products-grid" id="productsGrid">s
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>No products found</h3>
+            <p>Try adjusting your filters to see more results</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

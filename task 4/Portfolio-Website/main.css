@@ -1,0 +1,356 @@
+html {
+    font-family: "Signika", sans-serif;
+    background-color: rgba(15, 23, 42, 255);
+    margin: 0;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.nav {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 1);
+    text-align: right;
+    padding: 4px 16px;
+    z-index: 10;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+    margin-right: 25px;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link:before {
+    content: '';
+    background: rgba(85, 211, 192, 255);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-nav {
+    background-position: 0;
+}
+
+.hover-nav:hover::before {
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.intro {
+    color: white;
+    margin-top: 20%;
+    margin-left: 58%;
+    font-size: 40px;
+    padding-right: 1px;
+    text-decoration: none;
+}
+
+.helo {
+    color: rgba(85, 211, 192, 255);
+    font-size: 50%;
+}
+
+.helo::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2px;
+    background-color: rgba(85, 211, 192, 255);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.centered-text {
+    position: relative;
+    align-items: left;
+    justify-self: center;
+}
+
+.fade {
+    position: absolute;
+    animation-name: fade;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    color: rgba(85, 211, 192, 255);
+}
+
+.reverse {
+    animation-direction: alternate-reverse;
+}
+
+@keyframes fade {
+
+    0%,
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.project {
+    background: rgba(85, 211, 192, 0.08);
+    border: 2px solid rgba(85, 211, 192, 0.4);
+    border-radius: 18px;
+    padding: 28px 32px;
+    margin: 32px 0;
+    box-shadow: 0 4px 24px 0 rgba(85, 211, 192, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project h3 {
+    color: rgba(85, 211, 192, 1);
+    margin-top: 0;
+    text-align: center;
+}
+
+.project:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 32px 0 rgba(85, 211, 192, 0.18);
+}
+
+.project-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+}
+
+.project-link:hover,
+.project-link:focus {
+    background: rgba(85, 211, 192, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(85, 211, 192, 0.25);
+    outline: none;
+    transform: translateY(-6px) scale(1.02);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.project,
+.project-link {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: rgba(85, 211, 192, 0.08);
+    border: 2px solid rgba(85, 211, 192, 0.4);
+    border-radius: 18px;
+    padding: 18px 18px;
+    margin: 0;
+    box-shadow: 0 4px 24px 0 rgba(85, 211, 192, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.project h3,
+.project-link h3 {
+    color: rgba(85, 211, 192, 1);
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.project p,
+.project-link p {
+    font-size: 0.98em;
+    line-height: 1.5;
+}
+
+.about,
+.projects {
+    color: white;
+    margin-top: 25%;
+    margin-left: 280px;
+    margin-right: 280px;
+    font-size: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 30px;
+    padding-top: 250px;
+}
+
+.projects {
+    margin-top: 35%;
+    padding-top: 100px;
+}
+
+.about-heading,
+.project-heading {
+    color: rgba(85, 211, 192, 255);
+    text-align: center;
+}
+
+.favi-image {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 2px;
+    z-index: 11;
+}
+
+.ico {
+    color: white;
+}
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 500px;
+}
+
+.contact-heading {
+    text-align: center;
+    padding-top: 250px;
+    color: rgba(85, 211, 192, 255);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+    flex-wrap: wrap;
+}
+
+.ico i {
+    font-size: 3em;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+
+    .about,
+    .projects {
+        margin-left: 100px;
+        margin-right: 100px;
+        font-size: 18px;
+        padding-top: 120px;
+    }
+
+    .intro {
+        margin-left: 40%;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .about,
+    .projects {
+        margin-left: 40px;
+        margin-right: 40px;
+        font-size: 16px;
+        padding-top: 80px;
+    }
+
+    .intro {
+        margin-left: 10%;
+        font-size: 26px;
+    }
+
+    .favi-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav {
+        font-size: 16px;
+        padding: 4px 8px;
+    }
+
+    .ico i {
+        font-size: 2em;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project,
+    .project-link {
+        padding: 14px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .about,
+    .projects {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+        padding-top: 60px;
+    }
+
+    .intro {
+        margin-left: 0;
+        margin-top: 100px;
+        font-size: 20px;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .nav {
+        font-size: 14px;
+        padding: 4px 2px;
+        text-align: center;
+    }
+
+    .nav-link {
+        margin-right: 10px;
+        padding: 5px 0;
+    }
+
+    .favi-image {
+        width: 32px;
+        height: 32px;
+        top: 5px;
+        left: 5px;
+    }
+
+    .contact-heading {
+        padding-top: 80px;
+        font-size: 1.2em;
+    }
+
+    .icons {
+        gap: 20px;
+        padding-top: 20px;
+    }
+
+    .ico i {
+        font-size: 1.5em;
+    }
+}
